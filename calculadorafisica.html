@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css&quot;" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
+                
+        <link rel="stylesheet" href="style.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #230C33;">
+            <div class="container">
+                
+                <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">inicio</titulo1></a>
+                </li>
+                <li>
+                    <a href="menu.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">menu</titulo1></a>
+                </li>
+                <li>
+                    <a href="pedido.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">pedido</titulo1></a>
+                </li>
+                <li>
+                    <a href="contacto.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">contacto</titulo1></a>
+                </li>
+                <li class="active">
+                    <a href="calculadorafisica.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">calculadora fisica</titulo1></a>
+                </li>
+                 <li>
+                    <a href="apimovies.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies</titulo1>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="movies1.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies 2</titulo1>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+    </div>
+   <nav class="navbar navbar-light" style="background-color: #4cc0d4;">
+    </nav>
+    <style>
+
+    </style>
+    <div class="jumbotron">
+        <h1 class="display-4" style="color:rgb(54, 115, 136)">Fisica 1</h1>
+        <p class="lead">La física, del griego fisis («naturaleza»), es la ciencia natural que estudia, 
+          mediante leyes fundamentales, la energía, la materia, el tiempo y el espacio, es decir, el
+          universo mismo.</p>     
+  <form id="formulario">
+  <label for="distancia">Distancia:</label>
+  <input type="text" id="distancia"
+  name="distancia">
+<select id="distanciaUnidad">
+
+
+<option value="metros">Metros</option>
+<option value="pies">pies</option>
+</select>
+<br>
+<label for="tiempo">Tiempo:</label>
+<input type="text" id="tiempo"
+name="tiempo">
+<select id="tiempoUnidad">
+<option value="segundos">segundos</option>
+<option value="horas">Horas</option>
+</select>
+<br>
+<label for="velocidadUnidad">Unidades de velocidad
+</label>
+<select id="velocidadUnidad">
+  <option value="metros_por_segundo">m/s</option>
+  <option value="pies_por_segundo">ft/s</option>
+  <option value="kilometros_por_hora">km/h</option>
+  <option value="millas_por_hora">mph/h</option>
+  </option>
+</select>
+<br>
+<br>
+<button type="button" value="Calcular" onclick="Calcular()" style="background-color: #4cc0d4;">Calcular</form></button>
+</form>
+<p id="resultado"></p>
+ <p style="color:rgb(50, 129, 153)">Velocidad: <span id="velocidad"></span></p>
+ <p style="color:rgb(81, 167, 194)">Aceleracion: <span id="aceleracion"></span></p>
+ <p style="color:rgb(50, 129, 153)">Rapidez: <span id="rapidez"></span></p></div>
+<script>
+  function Calcular()
+  ///obtener los valores del formulario
+  {
+    const distancia = parseFloat(document.getElementById('distancia').value);
+    const tiempo = parseFloat(document.getElementById('tiempo').value);
+    console.log("distancia " + distancia );
+    console.log("tiempo " + tiempo );
+    const  distanciaUnidad =document.getElementById('distanciaUnidad').value;
+    const   tiempoUnidad = document.getElementById('tiempoUnidad').value;
+    const velocidadUnidad= document.getElementById('velocidadUnidad').value;
+
+///converitr unidades a sistema metrico(SI)
+    
+let distanciaSI = 0;
+let tiempoSI = 0;
+if (distanciaUnidad === 'metros'){
+distanciaSI = distancia;
+}
+else if (distanciaUnidad === 'pies'){
+  distanciaSI = distancia / 3.281;
+}
+if(tiempoUnidad === 'segundos'){
+  tiempoSI=tiempo;
+}
+else if (tiempoUnidad === 'horas'){
+  tiempoSI = tiempo * 3600;
+}
+console.log("distanciaSI " + distanciaSI );
+console.log("tiempoSI " + tiempoSI );
+//Calcular la velocidad,cakeracion y (Rapidez)
+
+let velocidad = 0;
+let aceleracion = 0;
+let rapidez= 0;
+
+if (velocidadUnidad==='metros_por_segundo'){
+  velocidad = distanciaSI / tiempoSI;
+  rapidez = velocidad; // esta no es la formula
+aceleracion = velocidad / tiempoSI;
+
+}
+else if (velocidadUnidad ==='pies_por_segundo'){
+  velocidad = (distanciaSI * 3.281) /( tiempoSI);
+  rapidez = velocidad; // esta no es la formula
+aceleracion = velocidad / tiempoSI;
+
+}
+else if (velocidadUnidad ==='kilometros_por_hora'){
+  velocidad = (distanciaSI / 1000 )/( tiempoSI / 3600);
+  rapidez = velocidad; // esta no es la formula
+aceleracion = velocidad / tiempoSI;
+}
+else if (velocidadUnidad ==='millas_por_hora'){
+  velocidad = (distanciaSI / 1609) / (tiempoSI / 3600);
+  rapidez = velocidad; // esta no es la formula
+aceleracion = velocidad / tiempoSI;
+}
+console.log("velocidad " + velocidad );
+console.log("rapidez " + rapidez );
+console.log("aceleracion " + aceleracion );
+
+
+//mostrar los resultados
+let resultado = '';
+
+document.getElementById('velocidad').textContent=velocidad.toFixed(5) + ' ' + velocidadUnidad;
+document.getElementById('aceleracion').textContent=aceleracion.toFixed(5);
+document.getElementById('rapidez').textContent=rapidez.toFixed(5) + ' ' + velocidadUnidad;
+document.getElementById('resultado').innerHTML=resultado;  
+}
+</script>
+
+<div id="footer"></div>
+<script>
+  $(function(){
+    $("#footer").load("/restauranton/footer.html");
+  });
+</script>
+</body>
+</html>

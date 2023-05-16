@@ -1,0 +1,127 @@
+<html>
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
+                      
+            <link rel="stylesheet" href="style.css">
+  <title>Movies API</title>
+</head>
+
+<body>
+      <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #230C33;">
+            <div class="container">
+                
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">inicio</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="menu.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">menu</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="pedido.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">pedido</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">contacto</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">calculadora fisica</titulo1></a>
+                    </li>
+               <li>
+                    <a href="apimovies.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies</titulo1>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="movies1.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies 2</titulo1>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+    </div>
+    
+<style>
+  footer{
+    background-color: #230C33;
+    color:#9984D4;
+    padding: 30px;
+  }
+  .container{
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .footer-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .footer-section{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .about{
+    text-align: center;
+  }
+  .about h2{
+    margin-bottom: 20px;
+  }
+  .about p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .contact-links{
+    display: flex;
+    justify-content: center;
+  }
+  .contact-links a{
+    display: inline-block;
+    color: #4cc0d4;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+  }
+  .contact-links a:hover{
+    transform: translateX(-15px);
+  }
+</style>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+    <div class="footer-section about">
+    <h2>Contactame</h2>
+    <p>si estas interesado en contactarme,puedes hacerlo a atraves de cualquiera de las siguientes 
+        redes Sociales:</p>
+        <a href="http://www.facebook.com/miperfil" 
+        target="_blank"><i class="fab fa-facebook">facebook</i></a>
+        <a href="http://www.instagram.com/miperfil" 
+        target="_blank"><i class="fab fa-instagram">instagram</i></a>
+        <a href="http://www.twitter.com/miperfil" 
+        target="_blank"><i class="fab fa-twitter">twitter</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+<script>
+  const redessociales=document.querySelectorAll('.contact-links');
+  redessociales.forEach(link=>{
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      window.open(link.href='_blank');
+    })
+  })
+</script>
+</footer>
+</body>
+
+</html>

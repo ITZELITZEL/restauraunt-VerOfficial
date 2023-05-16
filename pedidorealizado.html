@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        
+        <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
+                
+        <link rel="stylesheet" href="style.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #230C33;">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">inicio</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="menu.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">menu</titulo1></a>
+                    </li>
+                    <li class="active">
+                        <a href="pedido.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">pedido</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">contacto</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">calculadora fisica</titulo1></a>
+                    </li>
+                     <li>
+                    <a href="apimovies.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies</titulo1>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="movies1.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies 2</titulo1>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+    </div>
+    <titulo1>pedidos realizado</titulo1>
+    <h3>con exito</h3>
+    <ul>
+        <li><strong>Nombre: </strong> <span id="nombre"></span></li>
+        <li><strong>Apellido: </strong> <span id="apellido"></span></li>
+        <li><strong>Telefono: </strong> <span id="telefono"></span></li>
+        <li><strong>Direccion: </strong> <span id="direccion"></span></li>
+        <li><strong>Colonia: </strong> <span id="colonia"></span></li><br>
+        <li><strong>menu: </strong> <span id="menu"></span></li><br>
+        <li><strong>tomate: </strong> <span id="tomate"></span></li>
+        <li><strong>cebolla: </strong> <span id="cebolla"></span></li>
+        <li><strong>lechuga: </strong> <span id="lechuga"></span></li>
+        <li><strong>pepinillos: </strong> <span id="pepinillos"></span></li>
+        <li><strong>aguacate: </strong> <span id="aguacate"></span></li>
+        <li><strong>queso amarillo: </strong> <span id="quesoamarillo"></span></li>
+        <li><strong>queso: </strong> <span id="queso"></span></li>
+        <li><strong>crema: </strong> <span id="crema"></span></li>
+        <li><strong>agua: </strong> <span id="agua"></span></li>
+        <li><strong>coca cola: </strong> <span id="cocacola"></span></li>
+        <li><strong>sprite: </strong> <span id="sprite"></span></li>
+    </ul>
+    <script>
+        const orden=JSON.parse(localStorage.getItem("orden"));
+        document.getElementById("nombre").textContent=orden.nombre;
+        document.getElementById("apellido").textContent=orden.apellido;
+        document.getElementById("telefono").textContent=orden.telefono;
+        document.getElementById("direccion").textContent=orden.direccion;
+        document.getElementById("colonia").textContent=orden.colonia;
+        document.getElementById("menu").textContent=orden.menu;
+        document.getElementById("tomate").textContent=orden.tomate;
+        document.getElementById("cebolla").textContent=orden.cebolla;
+        document.getElementById("lechuga").textContent=orden.lechuga;
+        document.getElementById("pepinillos").textContent=orden.pepinillos;
+        document.getElementById("aguacate").textContent=orden.aguacate;
+        document.getElementById("quesoamarillo").textContent=orden.quesoamarillo;
+        document.getElementById("queso").textContent=orden.queso;
+        document.getElementById("crema").textContent=orden.crema;
+        document.getElementById("agua").textContent=orden.agua;
+        document.getElementById("cocacola").textContent=orden.cocacola;
+        document.getElementById("sprite").textContent=orden.sprite;
+    </script>
+</body>
+</html>

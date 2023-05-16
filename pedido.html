@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+        <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Inicio</title>
+</head>
+<body>
+    <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #230C33;">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">inicio</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="menu.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">menu</titulo1></a>
+                    </li>
+                    <li class="active">
+                        <a href="pedido.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">pedido</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">contacto</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">calculadora fisica</titulo1></a>
+                    </li>
+                     <li>
+                    <a href="apimovies.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies</titulo1>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="movies1.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies 2</titulo1>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+    </div>
+    <titulo1>pedido</titulo1><br>
+
+    <form id="pedido">
+<p>Nombre: <input type="text" id="nombre" name="nombre" size="30"></p>
+<p>Apellido: <input type="text" id="apellido" name="apellido" size="30"></p>
+<p>Telefono: <input type="text" id="telefono" name="telefono" size="20"></p>
+<p>Direccion: <input type="text" id="direccion" name="direccion" size="30"></p>    
+<p>Colonia: <input type="text" id="colonia" name="colonia" size="30"></p>
+<hr>
+<select name="menu" id="menu">
+    <optgroup label="Comida rapida:">
+        <option value="hamburgesa">hamburgesa</option>
+        <option value="tacos de bistec">tacos de bistec</option>
+        <option value="tacos al pastor">tacos al pastor</option>
+        <option value="sincronizada de bistec">sincronizadas de bistec</option>
+        <option value="torta de jamon">torta de jamon</option>
+        <option value="pizza hawaiana">pizza hawaiana</option>
+        <option value="pizza suprema">pizza suprema</option>
+    </optgroup>
+    <optgroup label="Platos fuertes:">
+        <option value="tostadas de pollo">tostadas de pollo</option>
+        <option value="sopes">sopes</option>
+    </optgroup>
+    <optgroup label="Postres:">
+        <option value="frappe de mango">frappe de mango</option>       
+       </optgroup>
+       </select>
+       <hr>
+       <titulo1>Ingredientes</titulo1><br>
+       Vegetales:<br>
+       <input type="checkbox"id="tomate"checked><label for="tomate">tomate</label><br>
+       <input type="checkbox"id="cebolla"checked><label for="cebolla">cebolla</label><br>     
+       <input type="checkbox"id="lechuga"checked><label for="lechuga">lechuga</label><br>
+       <input type="checkbox"id="pepinillos"checked><label for="pepinillos">pepinillos</label><br>
+       <input type="checkbox"id="aguacate"checked><label for="aguacate">aguacate</label><br>
+       Lacteos:<br>
+       <input type="checkbox"id="quesoamarillo"checked><label for="quesoamarillo">queso amarillo</label><br>
+       <input type="checkbox"id="queso"checked><label for="queso">queso</label><br>
+       <input type="checkbox"id="crema"checked><label for="crema">crema</label><br>
+       Bebidas:<br>
+       <input type="checkbox"id="agua"checked><label for="agua">agua</label><br>
+       <input type="checkbox"id="cocacola"checked><label for="cocacola">coca cola</label><br>
+       <input type="checkbox"id="sprite"checked><label for="sprite">sprite</label><br>
+
+       
+<input type="submit"value="enviar">
+<input type="reset"value="borrar">
+    </form>
+    <script>
+        const form=document.getElementById("pedido");
+        form.addEventListener("submit",function (event){ 
+        event.preventDefault();
+        const formData=new FormData (form);
+        const orden={
+            nombre:formData.get("nombre"),
+            apellido:formData.get("apellido"),
+            telefono:formData.get("telefono"),
+            direccion:formData.get("direccion"),
+            colonia:formData.get("colonia"),
+            menu:formData.get("menu"),
+            tomate:document.getElementById("tomate").checked ? "Si": "No",
+            cebolla:document.getElementById("cebolla").checked ? "Si": "No",
+            lechuga:document.getElementById("lechuga").checked ? "Si": "No",
+            pepinillos:document.getElementById("pepinillos").checked ? "Si": "No",
+            aguacate:document.getElementById("aguacate").checked ? "Si": "No",
+            quesoamarillo:document.getElementById("quesoamarillo").checked ? "Si": "No",
+            queso:document.getElementById("queso").checked ? "Si": "No",
+            crema:document.getElementById("crema").checked ? "Si": "No",
+            agua:document.getElementById("agua").checked ? "Si": "No",
+            cocacola:document.getElementById("cocacola").checked ? "Si": "No",
+            sprite:document.getElementById("sprite").checked ? "Si": "No",
+
+ };
+        localStorage.setItem ("orden",JSON.stringify(orden));
+        window.location.href="pedidorealizado.html"; 
+    });
+        </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+{"menu":[
+    {
+        "id":1,
+        "nombre":"Hamburguesa",
+        "descripcion":"Doble carne con tocino,queso amarillo,jalapeño",
+        "precio":100,
+        "imagen":"1.jpg"
+    },
+    {
+        "id":2,
+        "nombre":"Tacos al pastor",
+        "descripcion":"5 tacos con tortilla de maiz,trompo,piña,cebolla",
+        "precio":80,
+        "imagen":"3.jpg"
+    },
+    {
+        "id":3,
+        "nombre":"Tacos de bistec",
+        "descripcion":"5 tacos de bistec con tortilla de maiz,cilantro,cebolla.",
+        "precio":75,
+        "imagen":"2.jpg"
+    },
+    {
+        "id":4,
+        "nombre":"Sopes",
+        "descripcion":"tortilla gruesa cubierta de frijol, salsa roja,lechuga, tomate, crema, queso.",
+        "precio":110,
+        "imagen":"8.jpg"
+    },
+    {
+        "id":5,
+        "nombre":"Tostadas de pollo",
+        "descripcion":"Tostada con frijoles,pollo,lechuga,tomate,cebolla,queso y crema en su superficie",
+        "precio":25,
+        "imagen":"7.jpg"
+    }
+],
+"Complementos":[
+    {
+        "id":6,
+        "nombre":"frijoles charros",
+        "descripcion":"frijoles pintos con longaniza,tocino,salchicha,tomate,cebolla,chile guajillo,cilantro",
+        "precio":18,
+        "imagen":"frijolescharros.jpg"
+    },
+
+    {
+        "id":7,
+        "nombre":"Papas gajo",
+        "descripcion":"papas horneadas con aceite de oliva,queso parmesano y ajo en polvo",
+        "precio":"18",
+        "imagen":"papasgajo.jpg"
+    },
+    {
+        "id":8,
+        "nombre":"Guacamole",
+        "descripcion":"Contiene aguacate, tomate, cilantro y ají.",
+        "precio":"10",
+        "imagen":"guacamole.jpg"
+    },
+    {
+        "id":9,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    },
+    {
+        "id":10,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    }
+],
+"postres":[
+    {
+        "id":11,
+        "nombre":"Frappe de mango",
+        "descripcion":"contiene chile dulce y chamoy",
+        "precio":35,
+        "imagen":"10.jpg"
+    },
+    {
+        "id":12,
+        "nombre":"Cheescake de nutella",
+        "descripcion":"",
+        "precio":"35",
+        "imagen":"cheescake.jpg"
+    },
+    {
+        "id":13,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    },
+    {
+        "id":14,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    },
+    {
+        "id":15,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    }
+],
+"bebidas":[
+    {
+        "id":16,
+        "nombre":"Agua de limon",
+        "descripcion":"Jarra de agua de limon de 700 ml",
+        "precio":18,
+        "imagen":"limonada.jpeg"
+    },
+    {
+        "id":17,
+        "nombre":"Coca cola",
+        "descripcion":"Botella de coca cola de 600ml",
+        "precio":20,
+        "imagen":"cocacola.jpeg"
+    },
+    {
+        "id":18,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    },
+    {
+        "id":19,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    },
+    {
+        "id":20,
+        "nombre":"",
+        "descripcion":"",
+        "precio":"",
+        "imagen":""
+    }
+]
+}

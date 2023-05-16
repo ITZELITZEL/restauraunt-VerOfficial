@@ -1,0 +1,105 @@
+body {
+    background-color: #CAA8F5;
+    font-family: 'Fruinky', sans-serif;
+        font-size: 20px;                                         
+    }
+    
+    h1{
+        color: #230C33;
+    }
+    th{
+        background-color: #6CECBF;
+    }
+    table{
+        margin-left: 420px;
+        
+    }
+    img{
+    margin:15px 15px 15px 15px;
+    }
+    titulo1{
+        font-family: 'Levitation', sans-serif;                                       
+            font-size: 35px;
+            color: #592e83;
+            text-align: center;                                       
+    }
+    .collage{
+        position: relative;
+        width: 1200px;
+        height: 550px;
+        background-color: #9984D4;
+        border-radius: 20px;
+        opacity: 0.9;
+    }
+    .imagen1{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen2{
+        position: absolute;
+        top: 20px;
+        left: 320px;
+        width: 170px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen3{
+        position: absolute;
+        top: 20px;
+        left: 630px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen4{
+        position: absolute;
+        top: 20px;
+        left: 930px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen5{
+        position: absolute;
+        top: 300px;
+        left: 20px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen6{
+        position: absolute;
+        top: 300px;
+        left: 320px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen7{
+        position: absolute;
+        top: 300px;
+        left: 630px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
+    .imagen8{
+        position: absolute;
+        top: 300px;
+        left: 930px;
+        width: 200px;
+        height: 200px;
+        z-index: 1;
+        box-shadow: 2px 2px 2px 2px;
+    }
