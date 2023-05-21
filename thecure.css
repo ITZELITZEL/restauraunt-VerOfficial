@@ -1,6 +1,31 @@
+body{
+  background-color: lightgrey;
+}
+
+header{
+  background-color: midnightblue;
+  padding: 25px;
+}
+nav{
+  background-color: royalblue;
+  padding: 25px;
+}
+section{
+  background-color: steelblue;
+  padding: 25px;
+}
+article{
+  background-color: blueviolet;
+  padding: 25px;
+}
+aside{
+  background-color: mediumslateblue;
+  width: 40%;
+  float: left;
+}
 footer{
-    background-color: #230C33;
-    color:#9984D4;
+  background-color: skyblue;
+  color:#9984D4;
     padding: 30px;
   }
   .container{
