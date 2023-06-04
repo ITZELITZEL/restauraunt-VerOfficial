@@ -79,32 +79,50 @@ async function getMovies(url) {
 }
 function showMovies(Movies){
   main.innerHTML='';
-  movies.forEach(movies)=>{
-    const {title, poster_path,vote_average, overview, realese_date=movie }
+  movies.forEach((movie)=>{
+    const {title, poster_path,vote_average, overview, realese_date}=movie;
     const movieEl=document.createElement('div');
     
     movieEl.classList.add('movie');
-    movieEl.innerHTML=‘
+    movieEl.innerHTML=`
     <img src="${IMG_PATH+poster_path}" alt="${title}"
     <div class="movie-info">
       <h3>${title}
-      <span class="${getClassByRate(vote_average)}">${vote_average}</span>
+      <span class="${getClassByRate(vote_average)}">${vote_average}</span></div>
       <div class="overview">
         <h3>Overview</h3>
-        ${overview}
+        ${Overview}
         <h3>Release Date</h3>
-        ${realese_date}
+        ${realese_date}</div>`;
         main.appendChild(movieEl);
-      </div>
-    </div>
-    ’
+  });
+};
+function getClassByRate(vote){
+  if(vote>=8){
+    return 'green';
+}else if(vote>=5){
+  return 'orange';
+}else{
+    return 'red';
   }
 }
-      </script>
-      <div id="footer"></div>
+form.addEventListener('submit',(e)=>{
+  e.preventDefault()
+  const searchTerm=search.value;
+  if(searchTerm && searchTerm !==''){
+    getMovies(SEARCH_API+searchTerm)
+    search.value='';
+  }else{
+    window.location.reload();
+  }
+})
+
+ </script>
+
+<div id="footer"></div>
 <script>
   $(function(){
-    $("#footer").load("External/restauranton/footer.html");
+    $("#footer").load("/footer.html");
   });
 </script>
 </body>
