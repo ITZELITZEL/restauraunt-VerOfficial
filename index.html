@@ -8,13 +8,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
         <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
         <link href="https://fonts.cdnfonts.com/css/game-played-outline" rel="stylesheet">
                       
             <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="footer.css">
     <title>Inicio</title>
 </head>
 <body>
@@ -77,38 +78,36 @@
     </style>
     </script>
     
-   <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="fotter-section about">
-        <h2>Contactame</h2>
-        <p>si estas interesado en contactarme,puedes hacerlo a atraves de cualquiera de las siguientes 
-            redes Sociales:</p>
-            <div class="contact-links">
-            <a href="http://www.facebook.com/miperfil" 
-            target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="http://www.instagram.com/miperfil" 
-            target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="http://www.twitter.com/miperfil" 
-            target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="http://www.discord.com/miperfil" 
-            target="_blank"><i class="fab fa-discord"></i></a>
-            <a href="http://www.pinterest.com/miperfil" 
-            target="_blank"><i class="fab fa-pinterest"></i></a>
-            </div>
-            </div>
-           </div>
-         </div>
-    <script>
-        //este siguiente codigo es para que los enlaces se abran en una nueva pestaña
-        const redessociales = document.querySelectorAll('.contact-links');
-        redessociales.forEach(link =>{
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                window.open(link.href, '_blank');
-            });
-        });
-    </script>
- </footer>
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+      <div class="footer-section about">
+      <h2>Contactame</h2>
+      <p>si estas interesado en contactarme,puedes hacerlo a atraves de cualquiera de las siguientes 
+          redes Sociales:</p>
+          <a href="http://www.facebook.com/miperfil" 
+          target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="http://www.instagram.com/miperfil" 
+          target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="http://www.twitter.com/miperfil" 
+          target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="http://www.youtube.com/miperfil" 
+          target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="http://www.discord.com/miperfil" 
+          target="_blank"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+      </div>
+    </div> 
+  <script>
+    const redessociales=document.querySelectorAll('.contact-links');
+    redessociales.forEach(link=>{
+      link.addEventListener('click',e=>{
+        e.preventDefault();
+        window.open(link.href='_blank');
+      })
+    })
+  </script>
+  </footer>
 </body>
 </html>

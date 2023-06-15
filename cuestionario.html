@@ -62,21 +62,36 @@
       <div class="quiz-container" id="quiz">
         <div class="quiz-header">
           <div class="image-container">
-            <img src="imagen.jpg" alt="imagen" id="question-image" style="width: 200px; height: 200px;">
+            <img src="imagen.jpg" alt="Imagen" id="question-image" style="width: 200px; height: 200px;">
          
           <h2 id="question">Question text</h2>
           <ul>
-            <li><input type="radio" name="answer" id="a"
-             class="answer"><label for="a" id="a_text" >question</label></li>
-             <li><input type="radio" name="answer" id="b"
-             class="answer"><label for="b" id="b_text" >question</label></li>
-             <li><input type="radio" name="answer" id="c"
-             class="answer"><label for="c" id="c_text" >question</label></li>
-             <li><input type="radio" name="answer" id="d"
-             class="answer"><label for="d" id="d_text" >question</label></li>
+            <li>
+              <input type="radio" name="answer" id="a"
+             class="answer">
+             <label for="a" id="a_text" >Question</label>
+            </li>
+
+             <li>
+              <input type="radio" name="answer" id="b"
+             class="answer">
+             <label for="b" id="b_text" >Question</label>
+            </li>
+
+             <li>
+              <input type="radio" name="answer" id="c"
+             class="answer">
+             <label for="c" id="c_text" >Question</label>
+            </li>
+
+             <li>
+              <input type="radio" name="answer" id="d"
+             class="answer">
+             <label for="d" id="d_text" >Question</label>
+            </li>
           </ul>
         </div>
-        <button id="submit" >Siguiente</button>
+        <button id="submit" >Submit</button>
     </div>
     <script>
       const quizData=[
@@ -100,7 +115,7 @@
         }, 
         {
           question:"pregunta 3", 
-          image:"quiz1.jpg", 
+          image:"quiz3.jpg", 
           a:"Fresa", 
           b:"Platano", 
           c:"Mango", 
@@ -119,8 +134,10 @@
         
         let currentQuiz=0; //esta variable nos va a servir para realizar el seguimiento de la pregunta
         let score=0; //esta variable realiza el seguimiento del puntaje del usuario
+
         loadQuiz(); //va a cargar la primera pregunta del cuestionario
-        funtion loadQuiz(){
+
+        function loadQuiz(){
           deselectAnswers();
           const currentQuizData=quizData[currentQuiz];//obtiene los datos dde la pregunta actual
           questionEl.innerText=currentQuizData.question; //muesrra la pregunta actual em el elemento html correspondiente
@@ -128,16 +145,17 @@
           b_text.innerText=currentQuizData.b;//muestra la opcion de la respuesta B en elemento html correspondiente
           c_text.innerText=currentQuizData.c;//muestra la opcion de la respuesta C en elemento html correspondiente
           d_text.innerText=currentQuizData.d;//muestra la opcion de la respuesta D en elemento html correspondiente
+
           const questionImage=document.getElementById("question-image");
           questionImage.src=currentQuizData.image;
         }
         function deselectAnswers(){
-          answerEls.foreach(answerEl=>answerEl.checked=false); //desenmarca todas las casillas de verificación de respuesta
+          answerEls.forEach(answerEl=>answerEl.checked=false); //desenmarca todas las casillas de verificación de respuesta
         }
         function getSelected(){
           let answer;
           answerEls.forEach(answerEl=>{
-            if(answer.checked){
+            if(answerEl.checked){
               answer=answerEl.id; //en esta parte obtiene la opcion de respuesta seleccionada por el usuario.
             }
           });
