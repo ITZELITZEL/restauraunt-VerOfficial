@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link href="https://fonts.cdnfonts.com/css/fruinky" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/levitation" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/game-played-outline" rel="stylesheet">
+                      
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="footer.css">
+  <title>Cuestionario</title>
+</head>
+
+<body>
+   <div style="margin: 24px;">
+        <nav class="navbar navbar-light" style="background-color: #230C33;">
+            <div class="container">
+                
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">inicio</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="menu.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">menu</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="pedido.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">pedido</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="contacto.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">contacto</titulo1></a>
+                    </li>
+                    <li>
+                        <a href="calculadorafisica.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">calculadora fisica</titulo1></a>
+                    </li>
+                    <li>
+                    <a href="apimovies.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies</titulo1>
+                    </a>
+                  </li>
+                   <li>
+                    <a href="movies1.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">movies 2</titulo1>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a href="cuestionario.html" style="color: #9984D4;"><titulo1 style="font-size: 15px;">cuestionario</titulo1>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+         </nav>
+    </div>
+    
+    <div class="container">
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <div class="image-container">
+            <img src="imagen.jpg" alt="imagen" id="question-image" style="width: 200px; height: 200px;">
+         
+          <h2 id="question">Question text</h2>
+          <ul>
+            <li><input type="radio" name="answer" id="a"
+             class="answer"><label for="a" id="a_text" >question</label></li>
+             <li><input type="radio" name="answer" id="b"
+             class="answer"><label for="b" id="b_text" >question</label></li>
+             <li><input type="radio" name="answer" id="c"
+             class="answer"><label for="c" id="c_text" >question</label></li>
+             <li><input type="radio" name="answer" id="d"
+             class="answer"><label for="d" id="d_text" >question</label></li>
+          </ul>
+        </div>
+        <button id="submit" >Siguiente</button>
+    </div>
+    <script>
+      const quizData=[
+        {
+          question:"cual es la mejor fruta?", 
+          image:"quiz1.jpg", 
+          a:"Fresa", 
+          b:"Platano", 
+          c:"Mango", 
+          d:"Sandia",
+          correct:"a", 
+        },
+        {
+          question: "pregunta?",
+          image: "quiz2.jpg",
+          a: "Fresa",
+          b: "Platano",
+          c: "Mango",
+          d: "Sandia",
+          correct: "a",
+        }, 
+        {
+          question:"pregunta 3", 
+          image:"quiz1.jpg", 
+          a:"Fresa", 
+          b:"Platano", 
+          c:"Mango", 
+          d:"Sandia",
+          correct:"a", 
+        }, 
+        ];
+        const quiz=document.getElementById('quiz');
+        const answerEls=document.querySelectorAll('.answer');
+        const questionEl=document.getElementById('question');
+        const a_text=document.getElementById('a_text');
+        const b_text=document.getElementById('b_text');
+        const c_text=document.getElementById('c_text');
+        const d_text=document.getElementById('d_text');
+        const submitBtn=document.getElementById('submit');
+        
+        let currentQuiz=0; //esta variable nos va a servir para realizar el seguimiento de la pregunta
+        let score=0; //esta variable realiza el seguimiento del puntaje del usuario
+        loadQuiz(); //va a cargar la primera pregunta del cuestionario
+        funtion loadQuiz(){
+          deselectAnswers();
+          const currentQuizData=quizData[currentQuiz];//obtiene los datos dde la pregunta actual
+          questionEl.innerText=currentQuizData.question; //muesrra la pregunta actual em el elemento html correspondiente
+          a_text.innerText=currentQuizData.a;//muestra la opcion de la respuesta A en elemento html correspondiente
+          b_text.innerText=currentQuizData.b;//muestra la opcion de la respuesta B en elemento html correspondiente
+          c_text.innerText=currentQuizData.c;//muestra la opcion de la respuesta C en elemento html correspondiente
+          d_text.innerText=currentQuizData.d;//muestra la opcion de la respuesta D en elemento html correspondiente
+          const questionImage=document.getElementById("question-image");
+          questionImage.src=currentQuizData.image;
+        }
+        function deselectAnswers(){
+          answerEls.foreach(answerEl=>answerEl.checked=false); //desenmarca todas las casillas de verificación de respuesta
+        }
+        function getSelected(){
+          let answer;
+          answerEls.forEach(answerEl=>{
+            if(answer.checked){
+              answer=answerEl.id; //en esta parte obtiene la opcion de respuesta seleccionada por el usuario.
+            }
+          });
+          return answer;//devuelve la opción de la respuesta seleccionada.
+        }
+        submitBtn.addEventListener('clic',()=>{
+          const answer=getSelected();//obtiene la opcion de la respuesta seleccionada por el usuario.
+          if(answer){
+          if(answer===quizData[currentQuiz].correct){
+            score++;//incrementará el puntaje de las respuestas correctas
+          }
+          currentQuiz++;//incrementa
+          if(currentQuiz<quizData.length){
+            loadQuiz()
+          }else{
+            quiz.innerHTML=`
+            <h2>Contestaste ${score}/${quizData.length} de preguntas correctamente</h2>
+            <button onclick="location.reload()">Reload</button>
+            `
+          }
+          }
+        })
+    </script>
+    
+    <br>
+     <footer>
+    <div class="container">
+      <div class="footer-content">
+    <div class="footer-section about">
+    <h2>Contactame</h2>
+    <p>si estas interesado en contactarme,puedes hacerlo a atraves de cualquiera de las siguientes 
+        redes Sociales:</p>
+        <a href="http://www.facebook.com/miperfil" 
+        target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="http://www.instagram.com/miperfil" 
+        target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="http://www.twitter.com/miperfil" 
+        target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="http://www.youtube.com/miperfil" 
+        target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="http://www.discord.com/miperfil" 
+        target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </div> 
+<script>
+  const redessociales=document.querySelectorAll('.contact-links');
+  redessociales.forEach(link=>{
+    link.addEventListener('click',e=>{
+      e.preventDefault();
+      window.open(link.href='_blank');
+    })
+  })
+</script>
+</footer>
+</body>
+
+</html>
